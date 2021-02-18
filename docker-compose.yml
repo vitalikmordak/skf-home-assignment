@@ -1,0 +1,16 @@
+version: '3.0'
+services:
+  home_assignment:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: skf_home_assignment
+    network_mode: host
+    ports:
+    - 8080:8080
+  redis:
+    image: redis:6.0
+    container_name: skf_redis
+    network_mode: host
+    ports:
+    - 6379:6379
