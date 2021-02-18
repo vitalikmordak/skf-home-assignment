@@ -1,0 +1,17 @@
+### Publish message
+POST localhost:8080/v1/messages/publish
+Content-Type: application/json
+
+{
+  "content": "Some message content"
+}
+
+### Get last message if exists
+GET localhost:8080/v1/messages/getLast
+Content-Type: application/json
+Accept: application/json
+
+### Get messages by some time interval.The date should be in the next format 'yyyy-MM-dd'
+GET localhost:8080/v1/messages/getByTime?start=2021-02-18&end=2021-02-19
+Content-Type: application/json
+Accept: application/json
